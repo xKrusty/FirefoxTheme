@@ -5,7 +5,7 @@
 ```
     toolkit.legacyUserProfileCustomizations.stylesheets	(to enable userChrome and userContent)
     svg.context-properties.content.enabled 		(to allow custom colors on imported svg from this folder)
-	(without it Firefox only allows using svg context-* properties on images that are loaded from chrome:// and resource:// urls.)
+    (without it Firefox only allows using svg context-* properties on images that are loaded from chrome:// and resource:// urls.)
 ```
 2. Open Profile Folder
 ```
