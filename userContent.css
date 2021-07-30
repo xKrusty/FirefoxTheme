@@ -1,0 +1,91 @@
+/** ----------------------------- Custom Startpage ----------------------------- **/
+@-moz-document url(about:home), url(about:newtab) {
+  body {
+    --newtab-wordmark-color: #e1427e !important;
+  }
+
+  /* DARK THEME
+  body {
+    --newtab-background-color: #32353b !important;
+    --newtab-textbox-background-color: #3D4148 !important;
+    --newtab-search-text-color: #FFFFFF !important;
+    --newtab-topsites-background-color: #3D4148 !important;
+    
+
+    --newtab-tile-shadow-secondary: rgba(0,0,0, 0.5) !important;
+    --newtab-background-primary-text-color: #bbb !important;
+    --newtab-background-primary-text-color: #bbb !important;
+    --newtab-icon-primary-color: #bbb !important;
+
+    /* Customize Button */
+    --newtab-background-button-color: #3D4148 !important;
+    --newtab-background-button-hover-color: #2F3237 !important;
+    --newtab-background-button-text-color: #bbb !important;
+  
+    /* Customize Sidebar */
+    --customize-menu-background: #3D4148 !important;
+    --customize-menu-primary-text-color: #FFFFFF !important;
+    --customize-menu-secondary-action-background: #575757 !important;
+    --customize-menu-secondary-action-background-active: #2F3237 !important;
+    --customize-menu-seperator-line-color: #2F3237 !important;
+    --customize-menu-line-color: #000 !important;
+
+    --newtab-primary-action-background: #d24177 !important;
+    --newtab-primary-action-background-off: #2B2B2B !important;
+    */
+
+  }
+
+  /* Top Sites */
+  .outer-wrapper.newtab-experience .top-site-outer .tile {
+    border-radius: 0px !important;
+  }
+
+  /* Search */
+  .outer-wrapper.newtab-experience .search-wrapper .search-handoff-button, .outer-wrapper.newtab-experience .search-wrapper input {
+    border-radius: 0px !important;
+    box-shadow: 0 1px 4px 0 rgba(12, 12, 13, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.15) !important;
+  }
+
+  /* Remove Purple Box when no Preview */
+  .icon-wrapper {
+    background-color: transparent!important;
+  }
+
+  /* Replace Firefox Logo */
+  .search-wrapper .logo-and-wordmark .logo {
+    background: url("images//logo.png") no-repeat center !important;	/* Uses Firefox Focus Logo by default */
+    background-size: 82px !important;
+    height: 100px !important;
+    width: 82px !important;
+  }
+}
+
+
+/** ----------------------------- Custom Priavte Startpage ----------------------------- **/
+@-moz-document url(about:privatebrowsing) {}  /* has to be Twice otherwise it wont display changes */
+@-moz-document url(about:privatebrowsing) {
+  /* Replace Firefox Logo */
+  html.private .logo {
+    background-image: url("images/logo.png") !important;  /* Uses Firefox Focus Logo by default */
+    background-size: 96px !important;
+    height: 100px !important;
+    width: 96px !important;
+  }
+
+  /* Changes the color of the wordmark */
+  .wordmark {
+    fill: #e1427e !important;
+  }
+
+  /* Remove Border Around Search bar */
+  .search-handoff-button, .search-handoff-button:active, .search-handoff-button:enabled:hover:active {
+    border-radius: 0px !important;
+  }
+  :root {
+    --in-content-button-border-radius: 0px !important;
+  }  
+}
+
+
+

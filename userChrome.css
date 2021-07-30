@@ -1,0 +1,398 @@
+
+
+
+/** ----------------------------- Custom Theme ----------------------------- **/
+:root {
+  /* Custom Variables */
+  --download-footer: #ededed;
+
+  --search-result-background: #36393f;
+  --search-result-text: #f0f0f0;
+  --search-current-active: rgb(27, 27, 27);
+  --search-caret-color: #6e6e6e;
+
+  --newtab-button: rgb(159, 161, 160);
+
+  --backbutton-background: rgba(255,255,255, 0.3);
+  --backbutton-border-color: rgba(0,0,0, 0.3);
+
+  --findbar-search-background: rgb(27, 27, 27);
+  --findbar-search-text: white;
+
+  --tabselected-text: white;
+  --tabselected-bar: black;
+
+  --tabinactive-text: rgb(159, 161, 160);
+  --tabinactive-bar: rgb(73,78,76);
+
+  --toolbar-background: rgb(35, 40, 38);
+  --toolbar-text: rgb(159, 161, 160);  /* Close/Minimize/Maximize Button color */
+  
+	
+  /* Firefox Variables */
+  --toolbar-bgcolor: rgb(167, 44, 78) !important;						/* Toolbar Background color */
+  --toolbar-color: rgb(255, 255, 255) !important;						/* Toolbar Text color */
+  --toolbarbutton-icon-fill: rgb(255, 255, 255) !important;			/* Toolbar Icon color */
+	
+  --lwt-accent-color: rgb(35, 40, 38) !important;						/* Toolbar unselected Tab/Rest background color */
+  --lwt-text-color: rgb(159, 161, 160) !important;					/* Toolbar unselected Tab/Rest color */
+
+  --tab-line-color: rgb(242, 5, 53) !important;						/* Tab Selected Highlight color */
+  --tab-loading-fill: rgb(242, 5, 53) !important;					/* Tab Loading Highlight color */
+  --tab-selected-bgcolor: rgb(167, 44, 78) !important;				/* Tab Selected color */
+  --tabs-border-color: white !important;  
+	
+  --lwt-toolbar-field-focus: rgb(27, 27, 27) !important;				/* Searchbar Selected Background color */
+  --lwt-toolbar-field-background-color: rgb(27, 27, 27) !important;	/* Searchbar Background color */
+  --lwt-toolbar-field-focus-color: rgb(255, 255, 255) !important;		/* Searchbar Selected Text color */
+  --lwt-toolbar-field-color: rgb(255, 255, 255) !important;			/* Searchbar Text color */
+  --toolbar-field-non-lwt-color: rgb(255, 255, 255) !important; /* Searchbar URL color */
+  --urlbar-popup-url-color: rgb(0, 221, 255) !important; /* Searchbar Search Link color */
+  
+  --toolbar-field-non-lwt-bgcolor: rgb(27, 27, 27) !important;  /* Searchbar Background color */
+  --arrowpanel-border-color: rgb(0, 0, 0) !important; /* Searchbar Border color */
+  --autocomplete-popup-highlight-background: rgb(0, 99, 225) !important;  /* Search Currently Active Background color */
+  --autocomplete-popup-highlight-color: white !important; /* Search Currently Active Text color */
+  --autocomplete-popup-hover-background: rgba(255, 255, 255, 0.17) !important; /* Search Hover Background color */
+	
+  --autocomplete-popup-background: rgb(255, 255, 255) !important;		/* Popup Background color */
+  --autocomplete-popup-color: rgb(84, 84, 84) !important;				/* Popup Text color */
+
+  --button-hover-bgcolor: rgba(230,200,210, 0.24) !important;  		/* Button/Bookmark Hover color */
+  --button-active-bgcolor: rgba(230,200,210, 0.5) !important;  		/* Button/Bookmark Click color */
+  
+  --button-bgcolor: rgba(200, 200, 200, 0.17) !important;  					/* Popup Button Background color */
+  --button-color: rgb(0, 0, 0) !important; 			 				/* Popup Button Text color */
+  
+  --toolbar-non-lwt-bgcolor: rgb(167, 44, 78) !important; 			/* Findbar Background color */
+  --checkbox-checked-bgcolor: rgba(0,0,0,0) !important; /* Checkbox Ticker Background color */
+  --checkbox-checked-border-color: rgba(0,0,0,0) !important;  /* Checkbox Ticked Border color */
+  --checkbox-checked-hover-bgcolor: rgba(255, 255, 255, 0.17) !important; /* Checkbox Hover Background color */
+  --checkbox-checked-active-bgcolor: rgba(255, 255, 255, 0.3) !important; /* Checkbox Click Background color */
+  --checkbox-checked-color: rgb(255, 255, 255) !important;  /* Checkbox Tick color */
+  --toolbar-non-lwt-textcolor: rgb(255, 255, 255) !important; /* Checkbox Text color */
+  --error-text-color: rgba(255, 255, 255) !important; /* Error Nothing found color */
+
+  --chrome-content-separator-color: rgb(59, 19, 29) !important; /* Bar below Toolbar color */
+
+  --toolbarbutton-icon-fill-attention: #45a1ff !important;  /* Download Button color */
+
+  --arrowpanel-border-radius: 0px !important; /* Border Radius around Panels */
+  --arrowpanel-border-color: rgba(0,0,0, 0.4) !important;  /* Border color around Panels */
+  
+}
+
+
+
+/** ----------------------------- Custom Toolbar ----------------------------- **/
+
+#navigator-toolbox {
+}
+
+/* Tab Height and Border */
+.tabbrowser-tab {
+  min-height: 0 !important;
+  padding-inline: 0px !important;
+  box-shadow: inset -1px 0px var(--tabinactive-bar);		/* Small bar between tabs */
+}
+
+.tabbrowser-tab[visuallyselected] {
+  box-shadow: -1px 0px var(--tabselected-bar), 1px 0px var(--tabselected-bar) !important;  /* Add Small bars on selected tab */
+}
+
+.tab-background {
+  border-radius: unset !important;
+  margin-block: unset !important;
+}
+
+
+/* Tab Selected Top Border */
+#TabsToolbar[brighttext] #tabbrowser-tabs:not([noshadowfortests]) .tabbrowser-tab:is([visuallyselected="true"], [multiselected]) > .tab-stack > .tab-background {
+  box-shadow: inset 0px 2px var(--tab-line-color);
+}
+
+
+/* Tab Close Icon */
+.close-icon {
+  fill-opacity: 0 !important;
+}
+
+.tab-close-button {
+  margin-inline-end: -2px !important;
+  -moz-context-properties: fill, fill-opacity, stroke-opacity !important;
+  stroke-opacity: var(--toolbarbutton-icon-fill-opacity);
+  width: unset !important;
+  height: unset !important;
+  padding: unset !important;
+}
+.tabbrowser-tab:not(:hover) > .tab-stack > .tab-content > .tab-close-button {
+  width: unset !important;
+}
+
+
+/* under tabs */
+:root {
+  --tabs-border-color: black !important;		/* Changes gray bar below tab-bar */
+  --toolbarbutton-border-radius: 0px !important;	/* Removes Rounded Edges for seachbar */
+  --tab-min-height: 32px !important;				/* Changes Tab height */
+}
+
+/* Background Color */
+#navigator-toolbox {
+  background-color: var(--toolbar-background) !important;
+  color: var(--toolbar-text) !important; /* Close/Minimize/Maximize Button color */
+}
+
+
+/* Inactive/Unselected Tabs */
+.tabbrowser-tab:not([visuallyselected="true"], [multiselected], [selected="true"]), .tabbrowser-tab:-moz-lwtheme {
+  color: var(--tabinactive-text) !important;
+}
+
+
+/* Active/Selected Tab */
+.tabbrowser-tab[selected="true"] {
+  color: var(--tabselected-text) !important;
+}
+
+
+/* Resize Flexible Space */
+toolbarspring {
+  -moz-box-flex: 1;
+  min-width: 50px!important;
+  max-width: 50px!important;
+}
+
+
+/* Findbar */
+input.findbar-textbox {
+  background-color: var(--findbar-search-background) !important;
+  color: var(--findbar-search-text) !important;
+}
+
+findbar {
+  border-top: unset !important;
+}
+
+
+/* Firefox Bar before URL in settings */
+#identity-box[pageproxystate="valid"].notSecureText > .identity-box-button, #identity-box[pageproxystate="valid"].chromeUI > .identity-box-button, #identity-box[pageproxystate="valid"].extensionPage > .identity-box-button, #urlbar-label-box {
+  background-color: unset !important;
+}
+
+
+/* Zoom Margin Right */
+.toolbaritem-combined-buttons:not([widget-type="button-and-view"]), .toolbaritem-menu-buttons {
+  margin-inline-end: 2px !important;
+}
+
+
+/* Open new tab */
+#tabs-newtab-button {
+  fill: var(--newtab-button) !important;
+}
+
+
+
+/** ----------------------------- Custom Searchbar ----------------------------- **/
+#urlbar {
+  caret-color: var(--search-caret-color);	/* Carret Color */
+}
+
+#urlbar-background {
+  background: var(--search-current-active) !important; /* Selected Searchbar color */
+}
+
+/* Change Color For Search Results */
+.urlbarView {
+  /* Remove Dark Border Outside Search Results */
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  width: 100% !important;
+  
+  /* bottom border */
+  border-bottom: 1px solid var(--toolbar-field-focus-border-color);
+}
+
+.urlbarView-body-inner, .search-one-offs {
+  /* Result colors */
+  color: var(--search-result-text) !important;
+  background-color: var(--search-result-background) !important;
+  
+  /* Remove extra Separators */
+  border-top-color: transparent !important;
+  
+  /* Padding to Center  */
+  padding: 0 6px !important;
+}
+
+.urlbarView-body-inner {
+  /* Fix width of Active Search (Distance to the right, to make it even) */  
+  width: calc(100% - 12px) !important;
+}
+
+/* Remove Padding and Width change */
+#urlbar[breakout][breakout-extend] {
+  top: 4px !important; 
+  left: 0px !important; 
+  width: 100% !important; 
+}
+
+/* Remove Padding of Active Searchbar */
+#urlbar[breakout][breakout-extend] > #urlbar-input-container {
+  height: var(--urlbar-height) !important;  /* Set Active height to Same as Unselected height */
+  padding: 1px !important;
+}
+
+#urlbar[breakout][breakout-extend] > #urlbar-background {
+  animation: none !important;   /* Do not animate */
+  box-shadow: none !important;  /* Remove shadows */
+}
+
+/* Active Bar Display */
+.urlbarView-row:first-of-type {
+  display: block !important;
+}
+
+/* Search font-size */
+.urlbarView-row .urlbarView-title {
+  font-size: 13px !important;
+}
+
+/* Remove Spacing Top and Bottom */  
+#urlbar-results {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+
+
+/** ----------------------------- Custom Back/Forth ----------------------------- **/
+:root:not([uidensity="compact"]) #back-button > .toolbarbutton-icon {
+  background-color: var(--backbutton-background) !important;
+  background-origin: padding-box !important;
+  background-clip: padding-box !important;
+  border: 1px solid var(--backbutton-border-color) !important;
+  border-radius: 10000px !important;
+  width: 34px !important;
+  height: 34px !important;
+  padding: 8px !important;
+  transition-property: box-shadow !important;
+  transition-duration: var(--toolbarbutton-hover-transition-duration) !important;
+}
+
+
+
+/** ----------------------------- Custom Download ----------------------------- **/
+#downloadsPanel-blockedSubview, #downloadsPanel-mainView {
+  padding: 0px !important;
+}
+.downloadTypeIcon {
+  margin: 4px 13px !important;
+}
+#downloadsHistory {
+  margin: 0 !important;
+  padding: 0.9em 14px;
+}
+#downloadsFooter {
+  background-color: var(--download-footer) !important;
+  padding-bottom: 5px !important;
+}
+#emptyDownloads {
+  padding: 16px 16px !important;
+  margin: 0px !important;
+}
+
+
+
+/** ----------------------------- Custom Icons ----------------------------- **/
+
+/* Chevron (When Bar too short to display Everything) */
+#PlacesChevron, #nav-bar-overflow-button {
+  list-style-image: url('images/chevron.svg') !important;
+}
+
+/* Download Icon */
+#downloads-button, #downloads-indicator-anchor {
+  list-style-image: url("images/downloads/download-icons.svg#arrow-with-bar") !important;
+}
+/* Download Extended */
+.downloadIconShow > .button-box > .button-icon {
+  list-style-image: url("images/panel/panel-icon-folder.svg") !important;
+}
+
+/* Back/Forth Buttons */
+#back-button {
+  list-style-image: url("images/backforth/back.svg") !important;
+}
+#forward-button {
+  list-style-image: url("images/backforth/forward.svg") !important;
+}
+
+/* Bookmark */
+#pageAction-panel-bookmark, #star-button {
+  list-style-image: url("images/bookmark/bookmark-hollow.svg") !important;
+}
+#pageAction-panel-bookmark[starred], #star-button[starred] {
+  list-style-image: url("images/bookmark/bookmark.svg") !important;
+}
+
+/* Reload */
+#reload-button {
+  list-style-image: url("images/reload.svg") !important;
+}
+
+/* Zoom */
+#zoom-out-button {
+  list-style-image: url("images/zoom/zoom-out.svg") !important;
+}
+#zoom-in-button {
+  list-style-image: url("images/zoom/zoom-in.svg") !important;
+}
+
+/* Library */
+#library-button {
+  list-style-image: url("images/library.svg") !important;
+}
+
+/* Sidebar */
+#sidebar-button {
+  list-style-image: url("images/sidebar/sidebars-right.svg") !important;
+}
+#sidebar-button:-moz-locale-dir(ltr):not([positionend]), #sidebar-button:-moz-locale-dir(rtl)[positionend] {
+  list-style-image: url("images/sidebar/sidebars.svg") !important;
+}
+
+/* Menu */
+#PanelUI-menu-button {
+    list-style-image: url("images/menu.svg") !important;
+}
+
+/* Folder */
+.bookmark-item[container] {
+  list-style-image: url("images/folder.svg") !important;
+}
+
+/* New Tab */
+#tabs-newtab-button, #TabsToolbar #new-tab-button {
+  list-style-image: url("images/add.svg") !important;
+}
+
+/* Bookmark Page Default Icon */
+.bookmark-item {
+  list-style-image: url("images/defaultFavicon.svg") !important;
+}
+
+/* Home Button */
+#home-button {
+  list-style-image: url("images/home.svg") !important;
+}
+
+/* Close Tab/Search Button */
+.close-icon {
+  list-style-image: url(images/close.svg) !important;
+}
+
+
+
+
