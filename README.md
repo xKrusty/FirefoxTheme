@@ -1,5 +1,9 @@
 # Krusty's Firefox Theme
 
+![screen1](screenshots/img1.png)
+
+![screen2](screenshots/img2.png)
+
 ### Setup
 1. Enable Settings (in about:config):
 ```
