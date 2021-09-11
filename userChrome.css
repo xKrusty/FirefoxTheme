@@ -32,6 +32,8 @@
   /* Firefox Variables */
   --toolbar-bgcolor: rgb(167, 44, 78) !important;						/* Toolbar Background color */
   --toolbar-color: rgb(255, 255, 255) !important;						/* Toolbar Text color */
+  --toolbar-field-color: rgb(255, 255, 255) !important;					/* Toolbar Search Text color */
+  --toolbar-field-focus-color: rgb(255,255,255) !important;				/* Toolbar Search selected Text color */
   --toolbarbutton-icon-fill: rgb(255, 255, 255) !important;			/* Toolbar Icon color */
 	
   --lwt-accent-color: rgb(35, 40, 38) !important;						/* Toolbar unselected Tab/Rest background color */
@@ -215,7 +217,7 @@ findbar {
 }
 
 .urlbarView-body-inner, .search-one-offs {
-  /* Result colors */
+  /* Result colors (of the List that shows up) */
   color: var(--search-result-text) !important;
   background-color: var(--search-result-background) !important;
   
