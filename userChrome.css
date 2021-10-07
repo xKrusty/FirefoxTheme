@@ -42,6 +42,7 @@
   --tab-line-color: rgb(242, 5, 53) !important;						/* Tab Selected Highlight color */
   --tab-loading-fill: rgb(242, 5, 53) !important;					/* Tab Loading Highlight color */
   --tab-selected-bgcolor: rgb(167, 44, 78) !important;				/* Tab Selected color */
+  --lwt-selected-tab-background-color: rgb(242, 5, 54) !important;	/* Tab Selected Highlight color Linux */
   --tabs-border-color: white !important;  
 	
   --lwt-toolbar-field-focus: rgb(27, 27, 27) !important;				/* Searchbar Selected Background color */
