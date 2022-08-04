@@ -89,7 +89,9 @@
 
 /** ----------------------------- Custom Toolbar ----------------------------- **/
 
-#navigator-toolbox {
+
+#TabsToolbar {
+  box-shadow: inset 0px -1px var(--tabselected-bar);
 }
 
 /* Tab Height and Border */
@@ -108,12 +110,10 @@
   margin-block: unset !important;
 }
 
-
 /* Tab Selected Top Border */
-#TabsToolbar[brighttext] #tabbrowser-tabs:not([noshadowfortests]) .tabbrowser-tab:is([visuallyselected="true"], [multiselected]) > .tab-stack > .tab-background {
+#TabsToolbar[brighttext] .tabbrowser-tab:is([visuallyselected="true"], [multiselected]) > .tab-stack > .tab-background {
   box-shadow: inset 0px 2px var(--tab-line-color);
 }
-
 
 /* Tab Close Icon */
 .close-icon {
