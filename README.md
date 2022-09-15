@@ -1,4 +1,4 @@
-# Krusty's Firefox Theme
+# My Firefox Theme
 
 ![preview1](screenshots/img1.png)
 ![preview2](screenshots/img2.png)
