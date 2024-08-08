@@ -45,10 +45,10 @@
   --lwt-selected-tab-background-color: rgb(167, 44, 78) !important;	/* Tab Selected Highlight color Linux */
   --tabs-border-color: white !important;  
 	
-  --lwt-toolbar-field-focus: rgb(27, 27, 27) !important;				/* Searchbar Selected Background color */
-  --lwt-toolbar-field-background-color: rgb(27, 27, 27) !important;	/* Searchbar Background color */
-  --lwt-toolbar-field-focus-color: rgb(255, 255, 255) !important;		/* Searchbar Selected Text color */
-  --lwt-toolbar-field-color: rgb(255, 255, 255) !important;			/* Searchbar Text color */
+  --toolbar-field-focus: rgb(27, 27, 27) !important;				/* Searchbar Selected Background color */
+  --toolbar-field-background-color: rgb(27, 27, 27) !important;	/* Searchbar Background color */
+  --toolbar-field-focus-color: rgb(255, 255, 255) !important;		/* Searchbar Selected Text color */
+  --toolbar-field-color: rgb(255, 255, 255) !important;			/* Searchbar Text color */
   --toolbar-field-non-lwt-color: rgb(255, 255, 255) !important; /* Searchbar URL color */
   --urlbar-popup-url-color: rgb(0, 221, 255) !important; /* Searchbar Search Link color */
   
@@ -111,7 +111,7 @@
 }
 
 /* Tab Selected Top Border */
-#TabsToolbar[brighttext] .tabbrowser-tab:is([visuallyselected="true"], [multiselected]) > .tab-stack > .tab-background {
+#TabsToolbar[brighttext] .tabbrowser-tab:is([visuallyselected=""], [multiselected]) > .tab-stack > .tab-background {
   box-shadow: inset 0px 1px var(--tab-line-color) !important;
 }
 
@@ -219,7 +219,7 @@ findbar {
 
 .urlbarView-body-inner, .search-one-offs {
   /* Result colors (of the List that shows up) */
-  color: var(--search-result-text) !important;
+  /*! color: var(--search-result-text) !important; */
   background-color: var(--search-result-background) !important;
   
   /* Remove extra Separators */
@@ -255,6 +255,11 @@ findbar {
 /* Active Bar Display */
 .urlbarView-row:first-of-type {
   display: block !important;
+}
+
+.urlbarView-row[selected], .searchbar-engine-one-off-item[selected], .urlbarView-row:hover {
+  background-color: rgb(0, 99, 225) !important;
+  color: rgb(255, 255, 255) !important;
 }
 
 /* Search font-size */
