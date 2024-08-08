@@ -35,6 +35,12 @@
     height: 100px !important;
     width: 82px !important;
   }
+  
+  /* Set Firefox Text next to Icon, only necessary for Firefox Forks */
+  .wordmark {
+    background: url("images/firefox-wordmark.svg") no-repeat center center !important; 
+    background-Size: 134px !important;
+  }
 }
 
 
