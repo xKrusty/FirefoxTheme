@@ -66,7 +66,13 @@
   }
   :root {
     --in-content-button-border-radius: 0px !important;
-  }  
+  }
+  
+    /* Set Firefox Text next to Icon, only necessary for Firefox Forks */
+  .wordmark {
+    background: url("images/firefox-wordmark.svg") no-repeat center center !important; 
+    background-Size: 134px !important;
+  }
 }
 
 
