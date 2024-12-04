@@ -112,7 +112,7 @@
 
 /* Tab Selected Top Border */
 #TabsToolbar[brighttext] .tabbrowser-tab:is([visuallyselected=""], [multiselected]) > .tab-stack > .tab-background {
-  box-shadow: inset 0px 1px var(--tab-line-color) !important;
+  box-shadow: inset 0px 2px var(--tab-line-color) !important;
 }
 
 /* Tab Close Icon */
