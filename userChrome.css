@@ -195,10 +195,10 @@ findbar {
 
 /** ----------------------------- Custom Searchbar ----------------------------- **/
 :root[sizemode="maximized"] {
-    --searchbar-offset: 44px;
+    --searchbar-offset: 38px;
 }
 :root[sizemode="normal"] {
-    --searchbar-offset: 45px; /* Bigger since windows adds a border of 1px, which would offset the searchbar */
+    --searchbar-offset: 39px; /* Bigger since windows adds a border of 1px, which would offset the searchbar */
 }
 
 #urlbar {
