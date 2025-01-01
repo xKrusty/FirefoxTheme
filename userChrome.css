@@ -94,6 +94,12 @@
   box-shadow: inset 0px -1px var(--tabselected-bar);
 }
 
+/* Keep Tabbar width when draggin a Tab */
+#tabbrowser-tabs[movingtab] {
+  padding-bottom: 0px !important;
+  margin-bottom: 0px !important;
+}
+
 /* Tab Height and Border */
 .tabbrowser-tab {
   min-height: 0 !important;
@@ -104,6 +110,8 @@
 .tabbrowser-tab[visuallyselected] {
   box-shadow: -1px 0px var(--tabselected-bar), 1px 0px var(--tabselected-bar) !important;  /* Add Small bars on selected tab */
 }
+
+
 
 .tab-background {
   border-radius: unset !important;
@@ -198,14 +206,6 @@ findbar {
 
 
 /** ----------------------------- Custom Searchbar ----------------------------- **/
-:root[sizemode="maximized"] {
-    --searchbar-offset: 44px;
-}
-
-:root[sizemode="normal"] {
-    --searchbar-offset: 45px; /* Bigger since windows adds a border of 1px, which would offset the searchbar */
-}
-
 #urlbar {
   caret-color: var(--search-caret-color);	/* Carret Color */
 }
@@ -240,16 +240,15 @@ findbar {
 .urlbarView-body-inner {
   /* Fix width of Active Search (Distance to the right, to make it even) */  
   width: calc(100% - 12px) !important;
-  margin-inline: 0px !important; /* Remove "Scrollbar" on the right, which does nothing */
 }
 
 /* Remove Padding and Width change */
 #urlbar[breakout][breakout-extend] {
-  top: var(--searchbar-offset) !important; 
+  top: 44px !important; 
   /*! left: 0px !important; */ 
   /*! width: 100% !important; */ 
   margin-left: 0px !important;
-  width: var(--urlbar-width) !important;
+  width: var(urlbar-width) !important;
 }
 
 /* Remove Padding of Active Searchbar */
