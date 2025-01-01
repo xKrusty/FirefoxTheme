@@ -142,7 +142,7 @@
 :root {
   --tabs-border-color: black !important;		/* Changes gray bar below tab-bar */
   --toolbarbutton-border-radius: 0px !important;	/* Removes Rounded Edges for seachbar */
-  --tab-min-height: 32px !important;				/* Changes Tab height */
+  --tab-min-height: 26px !important;				/* Changes Tab height */
 }
 
 /* Background Color */
