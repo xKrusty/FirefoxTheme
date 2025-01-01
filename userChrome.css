@@ -111,8 +111,6 @@
   box-shadow: -1px 0px var(--tabselected-bar), 1px 0px var(--tabselected-bar) !important;  /* Add Small bars on selected tab */
 }
 
-
-
 .tab-background {
   border-radius: unset !important;
   margin-block: unset !important;
@@ -140,7 +138,6 @@
   width: unset !important;
 }
 
-
 /* under tabs */
 :root {
   --tabs-border-color: black !important;		/* Changes gray bar below tab-bar */
@@ -154,18 +151,15 @@
   color: var(--toolbar-text) !important; /* Close/Minimize/Maximize Button color */
 }
 
-
 /* Inactive/Unselected Tabs */
 .tabbrowser-tab:not([visuallyselected="true"], [multiselected], [selected="true"]), .tabbrowser-tab:-moz-lwtheme {
   color: var(--tabinactive-text) !important;
 }
 
-
 /* Active/Selected Tab */
 .tabbrowser-tab[selected="true"] {
   color: var(--tabselected-text) !important;
 }
-
 
 /* Resize Flexible Space */
 toolbarspring {
@@ -173,7 +167,6 @@ toolbarspring {
   min-width: 50px!important;
   max-width: 50px!important;
 }
-
 
 /* Findbar */
 input.findbar-textbox {
@@ -185,27 +178,29 @@ findbar {
   border-top: unset !important;
 }
 
-
 /* Firefox Bar before URL in settings */
 #identity-box[pageproxystate="valid"].notSecureText > .identity-box-button, #identity-box[pageproxystate="valid"].chromeUI > .identity-box-button, #identity-box[pageproxystate="valid"].extensionPage > .identity-box-button, #urlbar-label-box {
   background-color: unset !important;
 }
-
 
 /* Zoom Margin Right */
 .toolbaritem-combined-buttons:not([widget-type="button-and-view"]), .toolbaritem-menu-buttons {
   margin-inline-end: 2px !important;
 }
 
-
 /* Open new tab */
 #tabs-newtab-button {
   fill: var(--newtab-button) !important;
 }
 
-
-
 /** ----------------------------- Custom Searchbar ----------------------------- **/
+:root[sizemode="maximized"] {
+    --searchbar-offset: 44px;
+}
+:root[sizemode="normal"] {
+    --searchbar-offset: 45px; /* Bigger since windows adds a border of 1px, which would offset the searchbar */
+}
+
 #urlbar {
   caret-color: var(--search-caret-color);	/* Carret Color */
 }
@@ -244,11 +239,11 @@ findbar {
 
 /* Remove Padding and Width change */
 #urlbar[breakout][breakout-extend] {
-  top: 44px !important; 
+  top: var(--searchbar-offset) !important; 
   /*! left: 0px !important; */ 
   /*! width: 100% !important; */ 
   margin-left: 0px !important;
-  width: var(urlbar-width) !important;
+  width: var(--urlbar-width) !important;
 }
 
 /* Remove Padding of Active Searchbar */
