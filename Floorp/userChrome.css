@@ -416,10 +416,13 @@ findbar {
 
 /* IDK WHY BUT CHANGING --toolbar-bgcolor or --toolbar-non-lwt-bgcolor affects the background color when loading new pages, which looks ugly. so here a hacky way of changing the topbar color */
 .browser-toolbar {
-&:not(.titlebar-color) {
-	background-color: rgb(167, 44, 78) !important;
-}
+  &:not(.titlebar-color) {
+    background-color: rgb(167, 44, 78) !important;
+  }
 }
 
+findbar {
+    background-color: rgb(167, 44, 78) !important;
+}
 
 
