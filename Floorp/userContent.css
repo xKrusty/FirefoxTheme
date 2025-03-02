@@ -1,0 +1,87 @@
+/** ----------------------------- Custom Startpage ----------------------------- **/
+@-moz-document url(about:home), url(about:newtab) {
+  body {
+    --newtab-wordmark-color: #e1427e !important;
+  }
+
+  /* Top Sites */
+  li.top-site-outer > div:nth-child(1) > a:nth-child(1) > div:nth-child(1) {
+    border-radius: 0px !important;
+    box-shadow: none !important;
+    border: rgba(12, 12, 13, 0.2) 1px solid;
+  }
+
+  /* Search */
+  .search-handoff-button {
+    border-radius: 0px !important;
+  }
+  .fake-editable, .search-handoff-button {
+    box-shadow: none !important;
+  }
+
+  /* Remove Purple Box when no Preview */
+  .icon-wrapper {
+    background-color: transparent!important;
+  }
+
+  /* Replace Firefox Logo */
+  .search-wrapper .logo-and-wordmark .logo {
+    background: url("images//logo.png") no-repeat center !important;	/* Uses Firefox Focus Logo by default */
+    background-size: 82px !important;
+    height: 100px !important;
+    width: 82px !important;
+  }
+  
+  /* Set Firefox Text next to Icon, only necessary for Firefox Forks */
+  .wordmark {
+    background: url("images/firefox-wordmark.svg") no-repeat center center !important; 
+    background-Size: 134px !important;
+    width: 134px !important;
+  }
+  
+  /* Shortcuts */
+  .top-site-outer {
+    border: none !important;
+  }
+  
+  /* Settings button remove border */
+  .personalize-button {
+    border: none !important;
+  }
+  
+}
+
+
+/** ----------------------------- Custom Priavte Startpage ----------------------------- **/
+@-moz-document url(about:privatebrowsing) {}  /* has to be Twice otherwise it wont display changes */
+@-moz-document url(about:privatebrowsing) {
+  /* Replace Firefox Logo */
+  html.private .logo {
+    background-image: url("images/logo.png") !important;  /* Uses Firefox Focus Logo by default */
+    background-size: 96px !important;
+    height: 100px !important;
+    width: 96px !important;
+  }
+
+  /* Changes the color of the wordmark */
+  .wordmark {
+    fill: #e1427e !important;
+  }
+
+  /* Remove Border Around Search bar */
+  .search-handoff-button, .search-handoff-button:active, .search-handoff-button:enabled:hover:active {
+    border-radius: 0px !important;
+  }
+  :root {
+    --in-content-button-border-radius: 0px !important;
+  }
+  
+    /* Set Firefox Text next to Icon, only necessary for Firefox Forks */
+  .wordmark {
+    background: url("images/firefox-wordmark.svg") no-repeat center center !important; 
+    background-Size: 134px !important;
+  }
+}
+
+
+

@@ -19,3 +19,6 @@
 3. Create a **chrome** folder
 
 4. paste files into the **chrome** folder
+
+### Floorp
+* Replace the userChrome.css and userContent.css with the one inside the Floorp folder, copy the Floorp\images into the images folder
